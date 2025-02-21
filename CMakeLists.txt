@@ -7,6 +7,7 @@ endif()
 
 set(BUILD_EXAMPLE OFF CACHE BOOL "Build example")
 set(BUILD_TESTING ON CACHE BOOL "Build testing")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
