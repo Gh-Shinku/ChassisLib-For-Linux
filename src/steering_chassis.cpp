@@ -57,13 +57,14 @@ SteeringChassis::~SteeringChassis()
     // Stop the PID controller
 }
 
-void SteeringChassis::setParameter(const double &limit_vel, const double &limit_acc, const double &wheel_radius, const double &width, const double &length)
+void SteeringChassis::setParameter(const double &limit_vel, const double &limit_acc, const double &width, const double &length, const double &wheel_radius, const double& ratio)
 {
     this->limit_vel = limit_vel;
     this->limit_acc = limit_acc;
     this->wheel_radius = wheel_radius;
     this->width = width;
     this->length = length;
+    this->ratio = ratio;
 
     double theta = atan(length/width);
     double r=sqrt(width*width+length*length)/2;

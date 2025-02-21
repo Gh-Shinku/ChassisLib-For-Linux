@@ -32,7 +32,7 @@ private:
 public:
     SteeringChassis(const std::string &pose_topic,const std::string &vel_topic, const std::shared_ptr<Can> &can_handle);
     ~SteeringChassis();
-    void setParameter(const double &limit_vel,const double &limit_acc,const double &wheel_radius,const double &width,const double &length);
+    void setParameter(const double &limit_vel,const double &limit_acc,const double &width,const double &length,const double &wheel_radius,const double& ratio);
     void initialize();
     void execute();
 };
